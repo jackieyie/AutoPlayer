@@ -5,7 +5,7 @@ import sys
 import traceback # Keep traceback for unexpected errors
 
 # --- 配置常量 ---
-CONFIDENCE_LEVEL = 0.4 # 注意：0.5 仍然很低，易误识别
+CONFIDENCE_LEVEL = 0.5 # 注意：0.5 仍然很低，易误识别
 CHECK_INTERVAL = 10
 
 # 图片文件路径 (!!! 必须在 2560x1440 下准确截取 !!!)
@@ -16,11 +16,20 @@ MESSAGE_IMG = "message.png"
 
 # 坐标 (!!! 基于你的 2560x1440 分辨率 !!!)
 RETURN_BTN_ABS_POS = (1245, 39)
-HERO_MAIN_POS = (536, 868)
-HERO_ALT_POS = (510, 456)
-HERO_THREE_POS = (242, 726)
-HERO_FOUR_POS =(507, 722)
-HERO_FIVE_POS =(122, 596)
+#排位英雄位置
+# HERO_MAIN_POS = (536, 868)
+# HERO_ALT_POS = (377, 587)
+# HERO_THREE_POS = (242, 726)
+# HERO_FOUR_POS =(507, 722)
+# HERO_FIVE_POS =(122, 596)
+
+#养小号英雄位置
+HERO_MAIN_POS = (113, 468)
+HERO_ALT_POS = (241, 462)
+HERO_THREE_POS = (379, 457)
+HERO_FOUR_POS =(517, 461)
+HERO_FIVE_POS =(111, 594)
+
 CONFIRM_BTN_POS = (1266, 1018) # 锁定按钮
 PLAY_AGAIN_ABS_POS = (1226, 1306) # 再来一局按钮
 MESSAGE_CLICK_POS = (1288, 846) # 消息界面的点击坐标
