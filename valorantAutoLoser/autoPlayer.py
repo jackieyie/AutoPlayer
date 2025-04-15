@@ -22,18 +22,18 @@ HERO_THREE_POS = (242, 726)
 HERO_FOUR_POS =(507, 722)
 HERO_FIVE_POS =(122, 596)
 CONFIRM_BTN_POS = (1266, 1018) # 锁定按钮
-PLAY_AGAIN_ABS_PdOS = (1226, 1306) # 再来一局按钮
-MESSAGE_CLICK_POwS = (1288, 846) # 消息界面的点击坐标
-s
-# !!! 超时设置 !!d!
-LOBBY_TIMEOUT_SEsCONDS = 3600 # 大厅超时 1 小时
-MESSAGE_TIMEOUT_aSECONDS = 3600 # <--- 新增：消息界面超时 1 小时
-a
-# 移动参数s
-INGAME_MOVE_DURAwTION = 1.5
-w
-# 超时设置 (图像查s找)
-STATE_CHECK_TIMEwOUT = 2
+PLAY_AGAIN_ABS_POS = (1226, 1306) # 再来一局按钮
+MESSAGE_CLICK_POS = (1288, 846) # 消息界面的点击坐标
+
+# !!! 超时设置 !!!
+LOBBY_TIMEOUT_SECONDS = 3600 # 大厅超时 1 小时
+MESSAGE_TIMEOUT_SECONDS = 3600 # <--- 新增：消息界面超时 1 小时
+
+# 移动参数
+INGAME_MOVE_DURATION = 1.5
+
+# 超时设置 (图像查找)
+STATE_CHECK_TIMEOUT = 2
 
 # --- 核心函数 ---
 # find_image, wasd_move, back_to_lobby, attempt_start_new_game, select_hero, handle_message 函数保持不变
