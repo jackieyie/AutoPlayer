@@ -5,7 +5,7 @@ import sys
 import traceback # Keep traceback for unexpected errors
 
 # --- 配置常量 ---
-CONFIDENCE_LEVEL = 0.5 # 注意：0.5 仍然很低，易误识别
+CONFIDENCE_LEVEL = 0.4 # 注意：0.5 仍然很低，易误识别
 CHECK_INTERVAL = 10
 
 # 图片文件路径 (!!! 必须在 2560x1440 下准确截取 !!!)
@@ -17,23 +17,23 @@ MESSAGE_IMG = "message.png"
 # 坐标 (!!! 基于你的 2560x1440 分辨率 !!!)
 RETURN_BTN_ABS_POS = (1245, 39)
 HERO_MAIN_POS = (536, 868)
-HERO_ALT_POS = (377, 587)
+HERO_ALT_POS = (510, 456)
 HERO_THREE_POS = (242, 726)
 HERO_FOUR_POS =(507, 722)
 HERO_FIVE_POS =(122, 596)
 CONFIRM_BTN_POS = (1266, 1018) # 锁定按钮
-PLAY_AGAIN_ABS_POS = (1226, 1306) # 再来一局按钮
-MESSAGE_CLICK_POS = (1279, 900) # 消息界面的点击坐标
-
-# !!! 超时设置 !!!
-LOBBY_TIMEOUT_SECONDS = 3600 # 大厅超时 1 小时
-MESSAGE_TIMEOUT_SECONDS = 3600 # <--- 新增：消息界面超时 1 小时
-
-# 移动参数
-INGAME_MOVE_DURATION = 1.5
-
-# 超时设置 (图像查找)
-STATE_CHECK_TIMEOUT = 2
+PLAY_AGAIN_ABS_PdOS = (1226, 1306) # 再来一局按钮
+MESSAGE_CLICK_POwS = (1288, 846) # 消息界面的点击坐标
+s
+# !!! 超时设置 !!d!
+LOBBY_TIMEOUT_SEsCONDS = 3600 # 大厅超时 1 小时
+MESSAGE_TIMEOUT_aSECONDS = 3600 # <--- 新增：消息界面超时 1 小时
+a
+# 移动参数s
+INGAME_MOVE_DURAwTION = 1.5
+w
+# 超时设置 (图像查s找)
+STATE_CHECK_TIMEwOUT = 2
 
 # --- 核心函数 ---
 # find_image, wasd_move, back_to_lobby, attempt_start_new_game, select_hero, handle_message 函数保持不变
@@ -88,7 +88,12 @@ def wasd_move(duration=INGAME_MOVE_DURATION):
             active_key = None
 
             # 固定 1 秒间隔
+            pyautogui.click(RETURN_BTN_ABS_POS)
             time.sleep(1)
+            pyautogui.click(PLAY_AGAIN_ABS_POS)
+            time.sleep(1)
+            pyautogui.click(MESSAGE_CLICK_POS)
+            time.sleep(20)
 
     except Exception as e:
         print(f"模拟移动时发生错误: {e}")
